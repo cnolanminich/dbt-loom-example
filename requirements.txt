@@ -1,0 +1,5 @@
+dagster
+dagster-webserver
+dagster-dbt
+dbt-duckdb~=1.7.5
+dbt-loom
