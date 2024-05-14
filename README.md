@@ -1,4 +1,4 @@
-# Example setup for dbt-loom with Dagster
+# Example setup for dbt-loom with Dagster and 1 code location
 
 ~99% of this is exactly from the fork by Christophe Blefari -- the bottom bit is how you could orchestrate these cross-project works in Dagster.
 
@@ -52,7 +52,6 @@ In order to have the example working you need a few steps.
 `cp .env.example .env`
 `dagster dev`
 
-This is set up with Dagster using two code locations, one for each separate dbt project, but it creates 1 global asset graph as you would expect 🎉
+This is set up with Dagster using one code location. The primary benefit of using `dbt-loom` is the ability to create and enforce divisions between the dbt projects.
 
-<img width="1347" alt="image" src="https://github.com/cnolanminich/dbt-loom-example/assets/12430096/5d4cc006-7455-44b2-8e7a-b35bf5584475">
 
