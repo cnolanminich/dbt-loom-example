@@ -4,3 +4,6 @@ logs/
 .user.yml
 *.duckdb
 
+*.pyc
+.env
+.DS_Store
