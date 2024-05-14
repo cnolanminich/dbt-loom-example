@@ -2,7 +2,3 @@ load_from:
   - python_module:
       module_name: testing_loom
       working_directory: testing-loom/
-# Example of deploying multiple code locations locally
-  # - python_module:
-  #     module_name: testing_loom_finance
-  #     working_directory: finance/testing-loom-finance/
