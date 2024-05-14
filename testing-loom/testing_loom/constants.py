@@ -3,7 +3,7 @@ from pathlib import Path
 
 from dagster_dbt import DbtCliResource
 
-dbt_project_dir = Path(__file__).joinpath("..", "..", "..").resolve()
+dbt_project_dir = Path(__file__).parent.parent.parent.joinpath("core").resolve()
 dbt = DbtCliResource(project_dir=os.fspath(dbt_project_dir))
 
 # If DAGSTER_DBT_PARSE_PROJECT_ON_LOAD is set, a manifest will be created at run time.
@@ -12,7 +12,7 @@ if os.getenv("DAGSTER_DBT_PARSE_PROJECT_ON_LOAD"):
     dbt_manifest_path = (
         dbt.cli(
             ["--quiet", "parse"],
-            target_path=Path("target"),
+            target_path=Path(dbt_project_dir, "target"),
         )
         .wait()
         .target_path.joinpath("manifest.json")
