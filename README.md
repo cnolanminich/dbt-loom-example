@@ -1,4 +1,6 @@
-# Example setup for dbt-loom
+# Example setup for dbt-loom with Dagster
+
+~99% of this is exactly from the fork by Christophe Blefari -- the bottom bit is how you could orchestrate these cross-project works in Dagster.
 
 This repository showcase how you can use dbt-loom to setup multi-project collaboration with dbt Core and **without dbt Cloud**.
 ![Cross-project reference example](img/cross_project_references.png)
